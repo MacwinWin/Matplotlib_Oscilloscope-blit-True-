@@ -30,6 +30,8 @@ class animation1Class(QThread):
         self.on_start()
 
     def update_line(self, i):
+        self.y_votage = []
+        self.x_time = []
         try:
             with open('data0.txt', 'r') as f:
                 data = f.read()
@@ -67,6 +69,8 @@ class animation2Class(QThread):
         #self.line3, = self.canvas.ax3.plot([], [])
         self.on_start()
     def update_line(self, i):
+        self.y_current = []
+        self.x_time = []
         try:
             with open('data0.txt', 'r') as f:
                 data = f.read()
@@ -102,6 +106,8 @@ class animation3Class(QThread):
         self.line3, = self.canvas.ax3.plot([], [])
         self.on_start()
     def update_line(self, i):
+        self.y_power = []
+        self.x_time = []
         try:
             with open('data0.txt', 'r') as f:
                 data = f.read()
